@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>PHP Calculator</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #121212;
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh; 
+        }
+
+        #container {
+            background-color: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 10px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+            padding: 20px;
+            max-width: 90%;
+            width: 300px;
+            text-align: center;
+            margin: 20px;
+            overflow-y: auto; 
+        }
+        input[type="number"],
+        button[type="submit"],
+        select{
+            padding: 10px;
+            margin: 5px 0;
+            border: 1px solid #555;
+            border-radius: 5px;
+            width: calc(100% - 22px);
+            background-color: #333;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <h2>PHP Calculator</h2>
+        <form action="index.php" method="post">
+            <input type="number" name="num1" required>
+            <select name="operation">
+                <option value="add">Add</option>
+                <option value="subtract">Subtract</option>
+                <option value="multiply">Multiply</option>
+                <option value="divide">Divide</option>
+            </select>
+            <input type="number" name="num2" required>
+            <button type="submit" name="submit">Calculate</button>
+        </form>
+    </div>
+
+
+
+</body>
+</html>
